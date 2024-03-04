@@ -1,0 +1,251 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 16px;
+  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
+}
+
+.labelImg {
+  display: none;
+}
+.botonMenu {
+  height: 45px;
+  width: 45px;
+}
+.checkbox-img{
+
+}
+.menuCierre {
+  display: none;
+  height: 45px;
+  width: 45px;
+}
+
+.logoImg {
+  width: 8.25rem;
+  height: 2.625rem;
+}
+.divLogo {
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  position: fixed;
+  background-color: white;
+  width: 100vw;
+  margin-bottom: 2rem;
+}
+span {
+  margin-left: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+nav {
+  margin-top: 2rem;
+}
+.contenido {
+  height: 70vh;
+  background-image: url(../img/landing.jpg);
+  background-size: cover;
+  background-repeat: repeat-y;
+  background-attachment: fixed;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+h1 {
+  color: white;
+  font-size: 3rem;
+  margin-top: -1rem;
+}
+.textoLanding {
+  color: white;
+  font-size: 1.5rem;
+  margin-top: -1rem;
+}
+.whatsOnSpotify {
+  text-align: center;
+}
+
+.millionSong {
+  text-align: center;
+  width: 13vw;
+  margin-left: 6rem;
+}
+.textoWhatsOn {
+  font-size: 2.5rem;
+  border-bottom: 3px solid #19b16a;
+  font-weight: bold;
+  display: inline;
+  padding-bottom: 5px;
+}
+.textMillionSong {
+  color: #19b16a;
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+small {
+  color: grey;
+  font-size: 1.2rem;
+}
+.mSong {
+  width: 5rem;
+  height: 5rem;
+}
+.elementosWhatsOnSpotify {
+  display: flex;
+  justify-content: center;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+.streamEvery {
+  width: 16rem;
+}
+.smallStreamEvery {
+  width: 1rem;
+}
+.footer {
+  text-align: center;
+  background-color: #19b16a;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  height: 90vh;
+  display: flex;
+}
+
+.tituloDivIzquierdaFooter {
+  color: white;
+  font-size: 1.7rem;
+  border-bottom: 3px solid white;
+  font-weight: bold;
+  display: inline;
+  padding-bottom: 5px;
+  margin-left: 5.5rem;
+}
+.contenidoIzquierdaFooter {
+  padding-top: 7rem;
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 50vw;
+}
+.subTitulosDivIzquierdaFooter {
+  color: white;
+  font-size: 1.7rem;
+  font-weight: bold;
+  display: inline;
+  padding-bottom: 5px;
+  margin-left: 5.5rem;
+  align-self: flex-start;
+}
+.spanDivIzquierdo {
+  color: white;
+  font-weight: 100;
+  font-size: 1.2rem;
+  width: 18rem;
+  margin-left: 5.4rem;
+  text-align: left;
+}
+.span2,
+.span3 {
+  width: 16rem;
+}
+
+.segundoLogoSpoti {
+  width: 12rem;
+  height: 12rem;
+}
+.spotifyApp {
+  width: 14rem;
+  height: 25rem;
+}
+.contenidoDerechaFooter {
+  display: flex;
+  justify-content: space-between;
+  width: 50vw;
+  align-items: center;
+  margin-right: 5rem;
+}
+/*Media queries*/
+
+@media (360px <= width <= 535px) {
+  body {
+    margin: 0;
+  }
+  .header {
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: white;
+  }
+
+  nav {
+    display: none;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .labelImg {
+    display: block;
+    align-self: flex-end;
+    margin-right: 1rem;
+  }
+  .whatsOnSpotify {
+    display: flex;
+    flex-direction: column;
+  }
+  .elementosWhatsOnSpotify {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: auto;
+  }
+  .contenidoDerechaFooter {
+    align-items: center;
+    flex-direction: column;
+  }
+  .contenidoIzquierdaFooter {
+    flex-direction: column;
+  }
+
+  .tituloDivIzquierdaFooter {
+    font-size: 0.8rem;
+    display: inline;
+    width: 100%;
+  }
+
+  .spanDivIzquierdo {
+    width: 100%;
+  }
+
+  .checkbox-checked {
+    opacity: 0; /* Oculta la imagen de "cerrar" por defecto */
+  }
+  
+  .checkbox-img:checked + .checkbox-label .checkbox-image.checkbox-checked {
+    opacity: 1; /* Muestra la imagen de "cerrar" cuando el checkbox está marcado */
+  }
+  
+  .checkbox-img:checked + .checkbox-label .checkbox-image:not(.checkbox-checked) {
+    opacity: 0; /* Oculta la imagen de "menu" cuando el checkbox está marcado */
+  }
+
+}
+
+@media (540px <= width <= 820px) {
+}
+
+@media (912px <= width) {
+}
+@media (1024px <= width <= 1920px) {
+}
